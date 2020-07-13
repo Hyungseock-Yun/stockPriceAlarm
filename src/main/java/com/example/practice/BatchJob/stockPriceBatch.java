@@ -35,7 +35,7 @@ public class stockPriceBatch {
             }
             String curStockPriceStr = NumberFormat.getCurrencyInstance(Locale.KOREA).format(curStockPrice);
             String prevStockPriceStr = NumberFormat.getCurrencyInstance(Locale.KOREA).format(prevStockPrice);
-            String sendMessage = "종목 : " + stockMap.get(stockCode) + "\n" + "어제 주가 : " + prevStockPriceStr + "\n" + "현재 주가 : " + curStockPriceStr + "\n" + "등락률 : " + priceGap;
+            String sendMessage = "종목 : " + stockMap.get(stockCode) + "\n" + "어제 주가 : " + prevStockPriceStr + "\n" + "현재 주가 : " + curStockPriceStr + "\n" + "등락률 : " + priceGap + "\n";
             System.out.println(sendMessage);
         }
     }

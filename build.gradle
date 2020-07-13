@@ -28,6 +28,9 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     compile 'org.json:json:20160212'
+    // https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp
+    compile group: 'com.squareup.okhttp', name: 'okhttp', version: '2.7.5'
+
 }
 
 test {
