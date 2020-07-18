@@ -1,5 +1,6 @@
 package com.example.practice.BatchJob;
 
+import com.example.practice.Util.StockUtil;
 import com.squareup.okhttp.*;
 import org.json.JSONObject;
 
@@ -13,7 +14,7 @@ public class kakaoAPI {
         String kakaoHost = "https://kapi.kakao.com";
         String token = "Bearer " + "kDi_Q8-O5mUB1ksvbWQcGS4CmdjXfP6IAOrtRQo9cpgAAAFzYCA3iw";
         String sendMsgRequestUrl = kakaoHost + "/v2/api/talk/memo/default/send";
-        String sendMessage = "OkHttpClient 너무좋네;; 개사기;;";
+        String sendMessage = StockUtil.getStockMessage();
         JSONObject sendObject = new JSONObject();
         JSONObject urlObject = new JSONObject();
         urlObject.put("web_url", "https://finance.naver.com");
@@ -39,7 +40,7 @@ public class kakaoAPI {
 
             Response response = client.newCall(request).execute();
 
-            System.out.println(client.newCall(request).execute().body().string());
+            System.out.println(response);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
